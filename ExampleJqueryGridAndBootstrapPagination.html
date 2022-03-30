@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>Getting Started with jQuery Grid</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/> 
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div class="container">  
+  <h1>Paging example using jquery and bootstrap</h1>  
+    <table id="grid" class="table"></table>
+</div>  
+    <script type="text/javascript">
+        $(document).ready(function () {
+			var data = [ 
+				 {'ID': 1,  'Name': 'Hristo Stoichkov', 			'PlaceOfBirth': 'Plovdiv, Bulgária'}, 
+				 {'ID' :2, 'Name': 'Ronaldo Luis Nazario de Lima', 'PlaceOfBirth': 'Rio de Janeiro, Brasil'}, 
+				 {'ID': 3,  'Name': 'David Platt', 					'PlaceOfBirth': 'Chadderton , Lancashire, Inglaterra '}, 
+				 {'ID': 4,  'Name': 'Sandra Duque', 				'PlaceOfBirth': 'Chadderton , Lancashire, Inglaterra '}, 
+				 {'ID': 5,  'Name': 'Paulo Camargo', 				'PlaceOfBirth': 'Chadderton , Lancashire, Inglaterra '}, 
+				 {'ID': 6,  'Name': 'Oliver Sato', 					'PlaceOfBirth': 'Chadderton , Lancashire, Inglaterra '}, 
+				 {'ID': 7,  'Name': 'Miguel Santos', 				'PlaceOfBirth': 'Chadderton , Lancashire, Inglaterra '}, 
+				 {'ID': 8,  'Name': 'Marcio Camargo', 				'PlaceOfBirth': 'Chadderton , Lancashire, Inglaterra '}, 
+				 {'ID': 9,  'Name': 'Lima Santana', 				'PlaceOfBirth': 'Chadderton , Lancashire, Inglaterra '}, 
+				 {'ID': 10, 'Name': 'Caxias Ribeiro', 				'PlaceOfBirth': 'Chadderton , Lancashire, Inglaterra '}, 
+				 {'ID': 11, 'Name': 'Flávio Santana', 				'PlaceOfBirth': 'Chadderton , Lancashire, Inglaterra '}, 
+				 {'ID': 12, 'Name': 'Carlos Tanaka', 				'PlaceOfBirth': 'Chadderton , Lancashire, Inglaterra '} 
+
+			 ];
+			var grid = $('#grid').grid({
+                dataSource: data,
+                columns: [
+                    { field: 'ID',   width: 56 },
+                    { field: 'Name', sortable: true }
+                ],
+                pager: { limit: 5 }
+            });
+        });
+    </script>
+</body>
+</html>
