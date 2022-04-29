@@ -1,2 +1,3 @@
 # examplePaging
-Example Paging 
+
+Grid pagination example using bootstrap framework and jquery 
